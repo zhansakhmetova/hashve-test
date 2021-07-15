@@ -1,0 +1,40 @@
+@import "src/assets/styles/common";
+
+.title {
+  color: $green;
+}
+
+agm-map {
+  height: 400px;
+}
+
+.info {
+  background: $background;
+  padding: 12px;
+
+  @include for-size(mobile) {
+    flex-direction: column;
+  }
+
+  &__text {
+    width: 300px;
+    padding: 0 12px;
+    border-right: 1px solid $green;
+    grid-auto-flow: column;
+    gap: 16px;
+
+    @include for-size(mobile) {
+      border: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .img {
+    width: 50px;
+    height: 55px;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,92 @@
+@import "src/assets/styles/common";
+
+.footer {
+  background: $green;
+  color: $white;
+  padding: 24px 48px;
+
+  @include for-size(mobile) {
+    padding: 12px 0;
+
+    .container {
+      flex-direction: column;
+    }
+
+    .one {
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      order: 1;
+    }
+
+    .four {
+      flex-direction: column;
+      display: flex;
+      align-items: flex-end;
+      order: 2;
+      margin-top: 12px;
+    }
+
+    .two {
+      order: 3;
+    }
+
+    .three {
+      order: 4;
+    }
+  }
+
+  &__section {
+    border-right: 1px solid $white;
+    padding-right: 16px;
+
+    @include for-size(mobile) {
+      border: none;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 16px;
+    }
+
+    .payment {
+      margin-top: 12px;
+      gap: 12px;
+    }
+
+    .img {
+      width: 35px;
+      height: 35px;
+    }
+
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 12px;
+
+      @include for-size(mobile) {
+        margin-top: 12px;
+      }
+    }
+
+    .text {
+      cursor: pointer;
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__subsection {
+    margin-right:  16px;
+  }
+}

@@ -1,0 +1,68 @@
+@import 'src/assets/styles/common';
+
+.carousel {
+  &__body {
+    position: relative;
+
+
+
+    .list-ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .img {
+      height: 400px;
+      position: relative;
+      @include for-size(mobile) {
+        height: 300px;
+      }
+
+    }
+
+    .next {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      cursor: pointer;
+
+      &__img {
+        transform: rotate(-90deg);
+        width: 45px;
+        height: 45px;
+        background: $background;
+        padding: 5px;
+        border-radius: 50%;
+
+        @include for-size(mobile) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    .prev {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      cursor: pointer;
+      background: $background;
+      padding: 5px;
+      border-radius: 50%;
+
+      &__img {
+        transform: rotate(90deg);
+        width: 45px;
+        height: 45px;
+
+        @include for-size(mobile) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

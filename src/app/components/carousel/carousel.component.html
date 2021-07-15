@@ -1,0 +1,15 @@
+<section class="carousel">
+  <div class="carousel__body">
+    <ul class="list-ul">
+      <li class="list-li" *ngFor="let slide of slides; let i=index">
+        <ng-container *ngIf="i === currentIndex">
+          <img src="assets/images/{{slide.src}}" alt="" class="img" @carouselAnimation>
+        </ng-container>
+      </li>
+    </ul>
+    <div>
+      <div class="next" (click)="next()"><img src="assets/icons/arrow2.svg" alt="" class="next__img"></div>
+      <div class="prev" (click)="prev()"><img src="assets/icons/arrow2.svg" alt="" class="prev__img"></div>
+    </div>
+  </div>
+</section>

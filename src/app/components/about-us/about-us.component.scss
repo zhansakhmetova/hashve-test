@@ -1,0 +1,33 @@
+@import "src/assets/styles/common";
+
+.about-us {
+  padding: 48px 24px;
+
+  @include for-size(mobile) {
+    padding: 24px 12px;
+  }
+  &__expand {
+    .img {
+      width: 35px;
+      height: 35px;
+      margin-left: 12px;
+    }
+
+    .expanded {
+      transform: rotate(180deg);
+    }
+
+    .title {
+      margin: 6px 0;
+      color: $green;
+
+      @include for-size(mobile) {
+        font-size: 18px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid $green;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<section class="main container">
+  <div class="product">
+    <div class="product__line flex justify-between align-center">
+      <div class="flex">
+        <span class="dot" (click)="showProducts(1)"></span>
+        <span class="dot" (click)="showProducts(2)"></span>
+        <span class="dot" (click)="showProducts(3)"></span>
+      </div>
+      <h3 class="title"></h3>
+    </div>
+  </div>
+
+  <section class="products flex align-center justify-center">
+    <div class="card flex flex-column align-center" *ngFor="let product of products | slice:0:4;let i=index">
+        <img src="assets/images/{{product.src}}" alt="" class="img">
+        <span class="title bold">{{product.title}}</span>
+        <span class="text">{{product.descr}}</span>
+        <div class="flex">
+          <span class="price bold">₪ {{product.price}}</span>
+          <span class="sale">₪ 135</span>
+        </div>
+      <div class="btns flex flex-column">
+        <div class="btn align-center justify-center flex">Buy <img src="assets/icons/basket.svg" alt="" class="btn-img">
+        </div>
+        <div class="btn-light align-center justify-center flex">Favorites</div>
+      </div>
+    </div>
+  </section>
+</section>
