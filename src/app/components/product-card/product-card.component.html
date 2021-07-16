@@ -9,9 +9,8 @@
       <h3 class="title"></h3>
     </div>
   </div>
-
   <section class="products flex align-center justify-center">
-    <div class="card flex flex-column align-center" *ngFor="let product of products | slice:0:4;let i=index">
+    <div class="card flex flex-column align-center" *ngFor="let product of filtredProducts | slice:0:4;let i=index">
         <img src="assets/images/{{product.src}}" alt="" class="img">
         <span class="title bold">{{product.title}}</span>
         <span class="text">{{product.descr}}</span>

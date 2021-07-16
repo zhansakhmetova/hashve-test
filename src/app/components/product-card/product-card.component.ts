@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProductInfo} from '../products/products.component';
 
 
@@ -7,10 +7,14 @@ import {ProductInfo} from '../products/products.component';
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss'],
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements OnInit{
   @Input() products: ProductInfo[];
+  filtredProducts = [];
 
   showProducts(page: number) {
-    this.products = this.products.filter(item => item.page === page);
+    this.filtredProducts = this.products.filter(item => item.page === page);
+  }
+  ngOnInit() {
+    this.showProducts(1);
   }
 }
